@@ -5,25 +5,36 @@
     src: url(../fonts/Inter-Regular.ttf);
 }
 
+:root {
+    --body-color: #141E30;
+    --font-color-white: #ffffff;
+    --font-color-black: #000000;
+    --main-color: #ffffff;
+    --button-color: #00BEFA;
+}
+
 body {
-    padding: 50px 20px;
-    background-color: #141E30;
     min-width: 320px;
+    padding: 50px 20px;
+    background-color: var(--body-color);
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--font-color-black);
 }
 
 .wrapper {
     width: 100%;
     margin: 0 auto;
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    font-weight: 700;
+    overflow: hidden;
 }
 
 .main {
     max-width: 320px;
     margin: 0 auto;
     padding: 50px;
-    background-color: #ffffff;
+    background-color: var(--main-color);
     border-radius: 5px;
     text-align: center;
 }
@@ -37,17 +48,18 @@ body {
 }
 
 .mainTitle {
-    font-size: 22px;
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
 .mainDescriptions {
     margin-bottom: 50px;
+    font-size: 1rem;
 }
 
 .installButton_topText,
 .installButton_bottomText {
-    font-size: 10px;
+    font-size: 0.6rem;
 }
 
 .installButton {
@@ -55,8 +67,8 @@ body {
     height: 50px;
     display: block;
     margin: 10px auto;
-    background-color: #00BEFA;
-    color: #ffffff;
+    background-color: var(--button-color);
+    color: var(--font-color-white);
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
@@ -69,6 +81,14 @@ body {
 
 @media screen and (max-width: 640px) {}
 
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+    .main {
+        padding: 20px;
+    }
+    .installButton_topText,
+    .installButton_bottomText {
+        font-size: 0.5rem;
+    }
+}
 
 @media screen and (max-width: 360px) {}
