@@ -1,6 +1,4 @@
 @font-face {
-    font-family: "Inter Bold";
-    src: url(../fonts/Inter-Bold.ttf);
     font-family: "Inter";
     src: url(../fonts/Inter-Regular.ttf);
 }
@@ -13,14 +11,17 @@
     --button-color: #00BEFA;
 }
 
+html {
+    font-size: 10px;
+}
+
 body {
-    min-width: 320px;
-    padding: 50px 20px;
+    min-width: 280px;
+    padding: 3rem 1.2rem;
     background-color: var(--body-color);
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
     color: var(--font-color-black);
 }
 
@@ -33,46 +34,50 @@ body {
 .main {
     max-width: 320px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 5rem 4rem;
     background-color: var(--main-color);
-    border-radius: 5px;
+    border-radius: 0.5rem;
     text-align: center;
 }
 
 .mainLogo {
-    max-width: 80%;
+    max-width: 90%;
     display: block;
     box-sizing: border-box;
-    margin: 0 auto 40px;
-    border-radius: 5px;
+    margin: 0 auto 4rem;
+    border-radius: 0.5rem;
 }
 
 .mainTitle {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    padding: 0 2rem;
 }
 
 .mainDescriptions {
-    margin-bottom: 50px;
-    font-size: 1rem;
+    margin-bottom: 8rem;
+    font-size: 1.2rem;
+    padding: 0 2rem;
 }
 
 .installButton_topText,
 .installButton_bottomText {
-    font-size: 0.6rem;
+    font-size: 1rem;
 }
 
 .installButton {
     width: 100%;
-    height: 50px;
+    height: 5rem;
     display: block;
-    margin: 10px auto;
+    margin: 1rem auto;
     background-color: var(--button-color);
     color: var(--font-color-white);
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1.6rem;
     text-decoration: none;
-    line-height: 50px;
+    line-height: 5rem;
 }
 
 @media screen and (max-width: 1200px) {}
@@ -82,12 +87,14 @@ body {
 @media screen and (max-width: 640px) {}
 
 @media screen and (max-width: 480px) {
-    .main {
-        padding: 20px;
+    html {
+        font-size: 8px;
     }
-    .installButton_topText,
-    .installButton_bottomText {
-        font-size: 0.5rem;
+    .main {
+        padding: 5rem 3rem;
+    }
+    .mainLogo {
+        max-width: 80%;
     }
 }
 
